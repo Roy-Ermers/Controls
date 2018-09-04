@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Product+Sans%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i');
+:root {
+    --BaseColor: #FFF;
+    --BackgroundColor: #EEE;
+    --Accent: #e7e7e7;
+    --Accent2: #767676;
+}
+
+* {
+    outline: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+html,
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--BackgroundColor);
+}
+
+
+/* #region nav balk */
+
+nav {
+    --height: 64px;
+    font-family: "product sans";
+    background-color: var(--BaseColor);
+    height: var(--height);
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+}
+
+nav>h1,
+nav>img:not(.subitem) {
+    margin: 10px 15px;
+    margin-right: 0;
+    line-height: calc(var(--height) - 20px);
+    height: calc(100% - 20px);
+    color: var(--Accent2);
+}
+
+nav>.menu {
+    width: var(--height);
+    height: var(--height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav>.menu+* {
+    margin-left: 0;
+}
+
+nav>.menu>svg,
+nav>.menu>img {
+    fill: var(--Accent2);
+    transition: opacity ease-in-out 150ms;
+    opacity: 1;
+}
+
+nav>.menu>svg:hover,
+nav>.menu>img:hover {
+    opacity: 0.75;
+}
+
+nav>.spacer {
+    flex: 1;
+    margin: 15px;
+    display: flex;
+}
+
+nav>.spacer.divider {
+    border-left: 2px solid var(--Accent);
+}
+
+nav>a,
+nav>.subitem {
+    line-height: var(--height);
+    height: 32px;
+    color: var(--Accent2);
+    text-decoration: none;
+    text-align: center;
+    padding: 0 15px;
+    opacity: 1;
+    transition: opacity ease-in-out 150ms;
+}
+
+nav>a:hover,
+nav>.subitem:hover {
+    opacity: .75;
+}
+
+nav input[type=search] {
+    background-color: var(--Accent);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    color: var(--Accent2);
+}
+
+nav>.account {
+    display: flex;
+    align-content: stretch;
+    margin: 15px;
+    justify-items: stretch;
+}
+
+nav>.account>.avatar {
+    height: calc(var(--height) - 25px);
+    width: calc(var(--height) - 25px);
+    padding: 1px;
+    box-sizing: border-box;
+    background-color: var(--Accent);
+    border-radius: 100%;
+}
+
+nav>.account>.avatar>* {
+    width: 100%;
+}
+
+nav>.account>.name {
+    color: var(--Accent2);
+    line-height: calc(var(--height) - 30px);
+    vertical-align: bottom;
+    margin: auto 5px;
+}
