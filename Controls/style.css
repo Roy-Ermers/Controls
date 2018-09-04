@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Product+Sans%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i');
-:root {
+html {
     --BaseColor: #FFF;
     --BackgroundColor: #EEE;
+    --Accent: #e7e7e7;
+    --Accent2: #767676;
+}
+
+html.dark {
+    --BaseColor: #222;
+    --BackgroundColor: #111;
     --Accent: #e7e7e7;
     --Accent2: #767676;
 }
@@ -18,8 +25,8 @@
 html,
 body {
     margin: 0;
-    overflow-x: hidden;
     background-color: var(--BackgroundColor);
+    overflow-x: hidden;
 }
 
 
@@ -84,6 +91,11 @@ nav>.spacer.divider {
     border-left: 2px solid var(--Accent);
 }
 
+nav>.spacer>input[type=search] {
+    margin: 0 15px 0;
+    flex: 1;
+}
+
 nav>a,
 nav>.subitem {
     line-height: var(--height);
@@ -114,9 +126,16 @@ nav input[type=search] {
     background-color: var(--Accent);
     border: none;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 15px;
     margin: 10px;
     color: var(--Accent2);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }
 
 nav>.account {
@@ -135,8 +154,17 @@ nav>.account>.avatar {
     border-radius: 100%;
 }
 
-nav>.account>.avatar>* {
+nav>.account>.avatar>img {
     width: 100%;
+}
+
+nav>.account>.avatar>h1 {
+    line-height: calc(var(--height) - 31px);
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 500;
+    color: var(--Accent2);
 }
 
 nav>.account>.name {
