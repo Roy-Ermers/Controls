@@ -1,0 +1,9 @@
+main {
+    display: flex;
+    height: calc(100vh - var(--height));
+}
+
+section {
+    margin: 15px 10%;
+    flex: 1;
+}

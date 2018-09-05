@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Product+Sans%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i');
+
+html {
+    --BaseColor: #FFF;
+    --BackgroundColor: #f7f7f7;
+    --Accent: #e7e7e7;
+    --Accent2: #5a5a5a;
+}
+
+html.dark {
+    --BaseColor: #222;
+    --BackgroundColor: #111;
+    --Accent: #171717;
+    --Accent2: #a3a3a3;
+    color: #DDD;
+}
+
+* {
+    outline: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+html,
+body {
+    font-family: 'Product Sans';
+    font-size: 16px;
+    margin: 0;
+    background-color: var(--BackgroundColor);
+    overflow-x: hidden;
+}
+
+[hidden] {
+    display: none;
+    width: 0;
+    height: 0;
+}
