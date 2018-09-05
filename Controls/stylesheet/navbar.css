@@ -2,7 +2,8 @@ body {
     --height: 64px;
     margin-top: var(--height);
 }
-nav {    
+
+nav {
     position: fixed;
     top: 0;
     user-select: none;
@@ -34,6 +35,7 @@ nav>.menu {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 nav>.menu+* {

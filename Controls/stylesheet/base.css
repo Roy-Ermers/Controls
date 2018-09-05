@@ -5,6 +5,7 @@ html {
     --BackgroundColor: #f7f7f7;
     --Accent: #e7e7e7;
     --Accent2: #5a5a5a;
+    --Accent3: #afafaf;
 }
 
 html.dark {
@@ -12,6 +13,7 @@ html.dark {
     --BackgroundColor: #111;
     --Accent: #171717;
     --Accent2: #a3a3a3;
+    --Accent3: #494949;
     color: #DDD;
 }
 

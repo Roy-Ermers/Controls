@@ -6,4 +6,35 @@ main {
 section {
     margin: 15px 10%;
     flex: 1;
+    position: relative;
+}
+
+.card {
+    background-color: var(--BaseColor);
+    display: inline-block;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+    min-width: 125px;
+    min-height: 175px;
+    max-width: 500px;
+    padding: 15px;
+    margin: 5px;
+}
+
+.card>h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.card.rounded {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    border: 1px solid var(--Accent);
+    border-radius: 15px;
+}
+
+.carrousel {
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: auto;
+    width: 100%;
 }
